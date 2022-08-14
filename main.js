@@ -1,4 +1,4 @@
-var clicks = 1000;
+var clicks = 0;
 var gen1bought = 0;
 var gen2bought = 0;
 var gen1 = 0;
