@@ -7,12 +7,54 @@ body{
     color: white;
 }
 
+.upgradetick{
+    background-color: black;
+    border-color: red;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
 
+.clickme{
+    background-color: black;
+    border-color: red;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 25px;
+}
 
+#gen1{
+    background-color: black;
+    border-color: red;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
 
+#gen2{
+    background-color: black;
+    border-color: red;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
 
+#gen3{
+    background-color: black;
+    border-color: red;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
 
-
+#gen4{
+    background-color: black;
+    border-color: red;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
 
 #clearfix{
     content: "";
