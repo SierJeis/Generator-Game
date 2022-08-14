@@ -23,7 +23,7 @@ function updatecount(){
         document.querySelector("#gen2").innerHTML = "Tier 2 Generator: "+gen2+" {"+gen2bought+"} <br> Cost: "+Math.round(gen2cost)+" Clicks"
         document.querySelector("#gen3").innerHTML = "Tier 3 Generator: "+gen3+" {"+gen3bought+"} <br> Cost: "+Math.round(gen3cost)+" Clicks"
         document.querySelector("#cps").innerHTML = "Clicks Per Tick: "+(gen1+gen1bought);
-        document.querySelector("#tickspeed").innerHTML = "Upgrade Tickspeed <br> Cost: "+tickspeedcost+"<br> Tickspeed: "+Math.round(tickspeed)
+        document.querySelector("#tickspeed").innerHTML = "Upgrade Tickspeed <br> Cost: "+tickspeedcost+"<br> Tickspeed: "+Math.round(tickspeed);
     }, 10);
 }
 
