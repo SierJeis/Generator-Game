@@ -7,10 +7,10 @@ var gen1 = 0;
 var gen2 = 0;
 var gen3 = 0;
 var gen4 = 0;
-var gen1cost = 100;
-var gen2cost = 1000;
-var gen3cost = 10000;
-var gen4cost = 100000;
+var gen1cost = 10;
+var gen2cost = 100;
+var gen3cost = 1000;
+var gen4cost = 10000;
 var tickspeed = 1000;
 var tickspeedcost = 100;
 var myInterval = setInterval(mytimer, tickspeed);
@@ -36,7 +36,7 @@ function upgrade(){
         clearInterval(myInterval);
         clicks -= tickspeedcost;
         tickspeed /= 1.2;
-        tickspeedcost *= 2;
+        tickspeedcost *= 3;
         myInterval = setInterval(mytimer, tickspeed);
     }
 }
