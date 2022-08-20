@@ -14,6 +14,9 @@ var gen4cost = 10000;
 var tickspeed = 1000;
 var tickspeedcost = 100;
 var myInterval = setInterval(mytimer, tickspeed);
+const formatter = new Intl.NumberFormat('en', {
+    notation: 'compact'
+});
 
 function clicked(){
    clicks += 1;
@@ -21,13 +24,13 @@ function clicked(){
 
 function updatecount(){
     setInterval(() => {
-        document.querySelector("#clicks").innerHTML = "Clicks: "+Math.round(clicks);
-        document.querySelector("#gen1").innerHTML = "Tier 1 Generator: "+gen1+" {"+gen1bought+"} <br> Cost: "+Math.round(gen1cost)+" Clicks"
-        document.querySelector("#gen2").innerHTML = "Tier 2 Generator: "+gen2+" {"+gen2bought+"} <br> Cost: "+Math.round(gen2cost)+" Clicks"
-        document.querySelector("#gen3").innerHTML = "Tier 3 Generator: "+gen3+" {"+gen3bought+"} <br> Cost: "+Math.round(gen3cost)+" Clicks"
-        document.querySelector("#gen4").innerHTML = "Tier 4 Generator: "+gen4+" {"+gen4bought+"} <br> Cost: "+Math.round(gen4cost)+" Clicks"
-        document.querySelector("#cps").innerHTML = "Clicks Per Tick: "+(gen1+gen1bought);
-        document.querySelector("#tickspeed").innerHTML = "Upgrade Tickspeed <br> Cost: "+tickspeedcost+"<br> Tickspeed: "+Math.round(tickspeed);
+        document.querySelector("#clicks").innerHTML = "Clicks: "+formatter.format(clicks);
+        document.querySelector("#gen1").innerHTML = "Tier 1 Generator: "+formatter.format(gen1)+" {"+formatter.format(gen1bought)+"} <br> Cost: "+formatter.format(gen1cost);+" Clicks"
+        document.querySelector("#gen2").innerHTML = "Tier 2 Generator: "+formatter.format(gen2)+" {"+formatter.format(gen2bought)+"} <br> Cost: "+formatter.format(gen2cost);+" Clicks"
+        document.querySelector("#gen3").innerHTML = "Tier 3 Generator: "+formatter.format(gen3)+" {"+formatter.format(gen3bought)+"} <br> Cost: "+formatter.format(gen3cost);+" Clicks"
+        document.querySelector("#gen4").innerHTML = "Tier 4 Generator: "+formatter.format(gen4)+" {"+formatter.format(gen4bought)+"} <br> Cost: "+formatter.format(gen4cost);+" Clicks"
+        document.querySelector("#cps").innerHTML = "Clicks Per Tick: "+formatter.format((gen1+gen1bought));
+        document.querySelector("#tickspeed").innerHTML = "Upgrade Tickspeed <br> Cost: "+formatter.format(tickspeedcost)+"<br> Tickspeed: "+Math.round(tickspeed);
     }, 10);
 }
 
