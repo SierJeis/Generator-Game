@@ -43,7 +43,7 @@ function upgrade(){
         clearInterval(myInterval);
         clicks -= tickspeedcost;
         tickspeed /= 1.2;
-        tickspeedcost *= 3;
+        tickspeedcost *= 10;
         myInterval = setInterval(mytimer, tickspeed);
     }
 }
@@ -70,7 +70,7 @@ function buygen2(){
     if(gen2bought >= 10){
         gen2bought = 0;
         gen2multi *= 2;
-        gen2cost *= 10;
+        gen2cost *= 100;
     }
 }
 
@@ -83,7 +83,7 @@ function buygen3(){
     if(gen3bought >= 10){
         gen3bought = 0;
         gen3multi *= 2;
-        gen3cost *= 10;
+        gen3cost *= 1000;
     }
 }
 
@@ -96,7 +96,7 @@ function buygen4(){
     if(gen4bought >= 10){
         gen4bought = 0;
         gen4multi *= 2;
-        gen4cost *= 10;
+        gen4cost *= 10000;
     }
 }
 
