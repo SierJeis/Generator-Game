@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <script src="main.js"></script>
+    <script src="loop.js"></script>
     <title>Generators</title>
 </head>
 <body onload="updatecount()">
@@ -13,16 +14,29 @@
     <p style="margin: auto;" id="cps">Clicks Per Tick: 0</p>
     <hr style="width: 175px; float: left;">
    
-    <button id="clearfix" onclick="clicked()" class="clickme">Click Me</button>
-    <p></p>
-    <button onclick="upgrade()" id="tickspeed" class="upgradetick">Upgrade Tickspeed <br> Cost: 100 <br> Tickspeed: 1000</button>
-    <p></p>
-    <button onclick="buygen()" id="gen1">Tier 1 Generator: 0 {0} <br> Cost: 10 Clicks</button>
-    <p?></p>
-    <button onclick="buygen2()" id="gen2">Tier 2 Generator: 0 {0} <br> Cost: 100 Clicks</button>
-    <p></p>
-    <button onclick="buygen3()" id="gen3">Tier 3 Generator: 0 {0} <br> Cost: 1000 Clicks</button>
-    <p></p>
-    <button onclick="buygen4()" id="gen4">Tier 4 Generator: 0 {0} <br> Cost: 10000 Clicks</button>
+    <table class="table" id="clearfix">
+        <tr id="firstrow">
+            <td><button onclick="clicked()" class="clickme">Click Me</button></td>
+        </tr>
+        <tr id="secondrow">
+            <td><button onclick="upgrade()" id="tickspeed" class="upgradetick">Upgrade Tickspeed <br> Cost: 100 <br> Tickspeed: 1000</button></td>
+        </tr>
+        <tr id="thirdrow">
+            <td><button onclick="buygen()" id="gen1">Tier 1 Generator: 0 {0} <br> Cost: 10 Clicks</button></td>
+            <td><button id="until10" onclick="buyuntil10()">Buy Until 10 <br> Cost: 100 {10} </button></td>
+        </tr>
+        <tr id="fourthrow">
+            <td><button onclick="buygen2()" id="gen2">Tier 2 Generator: 0 {0} <br> Cost: 100 Clicks</button></td>
+            <td><button id="until102" onclick="buyuntil102()">Buy Until 10 <br> Cost: 1000 {10}</button></td>
+        </tr>
+        <tr id="fifthrow">
+            <td><button onclick="buygen3()" id="gen3">Tier 3 Generator: 0 {0} <br> Cost: 1000 Clicks</button></td>
+            <td><button id="until103" onclick="buyuntil103()">Buy Until 10 <br> Cost: 10000 {10} </button></td>
+        </tr>
+        <tr id="sixthrow">
+            <td><button onclick="buygen4()" id="gen4">Tier 4 Generator: 0 {0} <br> Cost: 10000 Clicks</button></td>
+            <td><button id="until104" onclick="buyuntil104()">Buy Until 10 <br> Cost: 100000 {10} </button></td>
+        </tr>
+    </table>
 </body>
 </html>

@@ -26,16 +26,40 @@ function clicked(){
    clicks += 1;
 }
 
-function updatecount(){
-    setInterval(() => {
-        document.querySelector("#clicks").innerHTML = "Clicks: "+formatter.format(clicks);
-        document.querySelector("#gen1").innerHTML = "Tier 1 Generator: "+formatter.format(gen1)+" {"+formatter.format(gen1bought)+"} ×"+gen1multi+"<br> Cost: "+formatter.format(gen1cost);+" Clicks";
-        document.querySelector("#gen2").innerHTML = "Tier 2 Generator: "+formatter.format(gen2)+" {"+formatter.format(gen2bought)+"} ×"+gen2multi+"<br> Cost: "+formatter.format(gen2cost);+" Clicks";
-        document.querySelector("#gen3").innerHTML = "Tier 3 Generator: "+formatter.format(gen3)+" {"+formatter.format(gen3bought)+"} ×"+gen3multi+"<br> Cost: "+formatter.format(gen3cost);+" Clicks";
-        document.querySelector("#gen4").innerHTML = "Tier 4 Generator: "+formatter.format(gen4)+" {"+formatter.format(gen4bought)+"} ×"+gen4multi+"<br> Cost: "+formatter.format(gen4cost);+" Clicks";
-        document.querySelector("#cps").innerHTML = "Clicks Per Tick: "+formatter.format((gen1*gen1multi));
-        document.querySelector("#tickspeed").innerHTML = "Upgrade Tickspeed <br> Cost: "+formatter.format(tickspeedcost)+"<br> Tickspeed: "+Math.round(tickspeed);
-    }, 10);
+function buyuntil10(){
+    var need = 10 - gen1bought;
+    if(clicks >= (gen1cost*need-gen1bought*gen1cost)){
+        gen1bought = 10;
+        gen1 += 10;
+        clicks -= gen1cost*10;
+    }
+}
+
+function buyuntil102(){
+    var need = 10 - gen2bought;
+    if(clicks >= (gen2cost*need-gen2bought*gen2cost)){
+        gen2bought = 10;
+        gen2 += 10;
+        clicks -= gen2cost*10;
+    }
+}
+
+function buyuntil103(){
+    var need = 10 - gen3bought;
+    if(clicks >= (gen3cost*need-gen3bought*gen3cost)){
+        gen3bought = 10;
+        gen3 += 10;
+        clicks -= gen3cost*10;
+    }
+}
+
+function buyuntil104(){
+    var need = 10 - gen4bought;
+    if(clicks >= (gen4cost*need-gen4bought*gen4cost)){
+        gen4bought = 10;
+        gen4 += 10;
+        clicks -= gen4cost*10;
+    }
 }
 
 function upgrade(){
@@ -54,11 +78,6 @@ function buygen(){
         gen1 += 1;
         clicks -= gen1cost;
     }
-    if(gen1bought >= 10){
-        gen1bought = 0;
-        gen1multi *= 2;
-        gen1cost *= 10;
-    }
 }
 
 function buygen2(){
@@ -66,11 +85,6 @@ function buygen2(){
         gen2bought += 1;
         gen2 += 1;
         clicks -= gen2cost;
-    }
-    if(gen2bought >= 10){
-        gen2bought = 0;
-        gen2multi *= 2;
-        gen2cost *= 100;
     }
 }
 
@@ -80,11 +94,6 @@ function buygen3(){
         gen3 += 1;
         clicks -= gen3cost;
     }
-    if(gen3bought >= 10){
-        gen3bought = 0;
-        gen3multi *= 2;
-        gen3cost *= 1000;
-    }
 }
 
 function buygen4(){
@@ -92,11 +101,6 @@ function buygen4(){
         gen4bought += 1;
         gen4 += 1;
         clicks -= gen4cost;
-    }
-    if(gen4bought >= 10){
-        gen4bought = 0;
-        gen4multi *= 2;
-        gen4cost *= 10000;
     }
 }
 

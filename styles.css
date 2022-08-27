@@ -30,6 +30,8 @@ body{
     color: white;
     text-align: center;
     padding: 15px;
+    height: 75px;
+    width: 250px;
 }
 
 #gen2{
@@ -38,6 +40,8 @@ body{
     color: white;
     text-align: center;
     padding: 15px;
+    height: 75px;
+    width: 250px;
 }
 
 #gen3{
@@ -46,6 +50,8 @@ body{
     color: white;
     text-align: center;
     padding: 15px;
+    height: 75px;
+    width: 250px;
 }
 
 #gen4{
@@ -54,10 +60,57 @@ body{
     color: white;
     text-align: center;
     padding: 15px;
+    height: 75px;
+    width: 250px;
 }
 
 #clearfix{
     content: "";
     display: block;
     clear: both;
+}
+
+.table{
+   float: left;
+   
+}
+
+#until10{
+    background-color: black;
+    border-color: red;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    height: 75px;
+}
+
+.table{
+    border-spacing: 2px 10px;
+}
+
+#until102{
+    background-color: black;
+    border-color: red;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    height: 75px;
+}
+
+#until103{
+    background-color: black;
+    border-color: red;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    height: 75px;
+}
+
+#until104{
+    background-color: black;
+    border-color: red;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    height: 75px;
 }
