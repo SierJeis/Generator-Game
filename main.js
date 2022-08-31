@@ -26,6 +26,8 @@ function clicked(){
    clicks += 1;
 }
 
+
+
 function buyuntil10(){
     var need = 10 - gen1bought;
     if(clicks >= (gen1cost*need-gen1bought*gen1cost)){
